@@ -9,4 +9,13 @@ Black.get('/',(req,res)=>{
         Black:data
     })
 })
+
+//Login
+Black.get('/login',(req,res)=>{
+    res.render('login')
+})
+
+
+
+
 module.exports=Black;
