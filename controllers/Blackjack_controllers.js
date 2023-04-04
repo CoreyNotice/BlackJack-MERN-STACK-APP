@@ -15,7 +15,10 @@ Black.get('/login',(req,res)=>{
     res.render('login')
 })
 
-
+//New User
+Black.get('/new',(req,res)=>{
+    res.render('newUser')
+})
 
 
 module.exports=Black;
