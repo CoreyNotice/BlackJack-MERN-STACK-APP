@@ -4,6 +4,9 @@ const data=require('../models/models')
 
 //WELCOME
 Black.get('/',(req,res)=>{
-    res.render('welcome')
+    res.render('welcome',
+    {
+        Black:data
+    })
 })
 module.exports=Black;
