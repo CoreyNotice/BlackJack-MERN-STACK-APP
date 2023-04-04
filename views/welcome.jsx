@@ -9,7 +9,8 @@ function welcome () {
         {/* <img src={models.image} alt='logo'/> */}
         <img src='https://www.shutterstock.com/image-vector/blackjack-logo-green-ribbon-on-600w-1639300576.jpg' alt='logo'/>
         <br></br>
-        <button>Play</button>
+      
+<button type="button" class="btn btn-primary btn-lg btn-block">Play</button>
       </Default>
     )
 }
