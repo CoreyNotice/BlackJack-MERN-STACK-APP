@@ -1,6 +1,16 @@
-module.exports=[
-    {
-        image:'https://www.shutterstock.com/image-vector/blackjack-logo-green-ribbon-on-600w-1639300576.jpg'
-    }
-]
+// require mongoose 
+const mongoose = require('mongoose')
+// creating shorthand for the Schema constructor 
+const { Schema } = mongoose 
 
+const blackSchema = new Schema({
+    firstName: { type: String, required:true,uniqueCaseInsensitive: true },
+    lastName: { type: String, required:true,uniqueCaseInsensitive: true },
+    email: { type: String,uniqueCaseInsensitive: true },
+   password: { type: String, required:true,uniqueCaseInsensitive: true  }
+  
+})
+
+const Black = mongoose.model('Black', blackSchema)
+
+module.exports = Black

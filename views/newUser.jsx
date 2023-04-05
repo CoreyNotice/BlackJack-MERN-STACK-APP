@@ -24,7 +24,7 @@ function New(){
                 id="email" 
                 name="email"
                 />
-                <label for="pass">Password (4 characters minimum):</label>
+                <label for="password">Password (4 characters minimum):</label>
                 <input 
                 type="password" 
                 id="pass" 

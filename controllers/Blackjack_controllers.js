@@ -1,24 +1,27 @@
 const express =require ('express')
-const Black=express.Router()
-const data=require('../models/models')
+const black=express.Router()
+const Black=require('../models/models.js')
+const seedData=require('../models/seeds.js')
 
 //WELCOME
-Black.get('/',(req,res)=>{
-    res.render('welcome',
-    {
-        Black:data
-    })
+black.get('/welcome',(req,res)=>{
+    res.render('welcome')
 })
-
+//seed
+black.get('/seed',(req,res)=>{
+    Black.insertMany(seedData)
+    .then(()=>res.redirect('/black/welcome'))
+    .catch((err) => console.log(err))
+})
 //Login
-Black.get('/login',(req,res)=>{
+black.get('/login',(req,res)=>{
     res.render('login')
 })
 
 //New User
-Black.get('/new',(req,res)=>{
+black.get('/new',(req,res)=>{
     res.render('newUser')
 })
 
 
-module.exports=Black;
+module.exports=black;
