@@ -7,7 +7,7 @@ function login() {
     <div>
       <h1>Log In Screen</h1>
       <p>Please enter user profile information or add New User by clicking button below</p>
-            <form>
+            <form action='/login' method="POST">
                 <label htmlFor="firstName">First Name</label>
                 <input
                 type='text'
@@ -26,15 +26,15 @@ function login() {
                 id="email" 
                 name="email"
                 />
-                <label for="password">Password (4 characters minimum):</label>
+                <label for="password">Password:</label>
                 <input 
                 type="password" 
                 id="password" 
                 name="password"
-                minlength="8" 
+                
                 required
                 />
-                <input type="submit" value= "New USer Profile"/>
+                <input type="submit" value= "Log In"/>
             </form>
             <br/>
             <div>

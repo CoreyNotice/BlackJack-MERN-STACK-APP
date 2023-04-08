@@ -5,14 +5,14 @@ function New(){
     return(
         <Default>
             <h2>New User Form</h2>
-            <form>
-                <label htmlFor="firstName">First Name</label>
+            <form action='/new' method="POST">
+                <label for="firstName">First Name</label>
                 <input
                 type='text'
                 name='firstName'
                 id='firstName'
                 />
-                <label htmlFor="lastName">Last Name</label>
+                <label for="lastName">Last Name</label>
                 <input
                 type='text'
                 name='lastName'
@@ -27,9 +27,8 @@ function New(){
                 <label for="password">Password (4 characters minimum):</label>
                 <input 
                 type="password" 
-                id="pass" 
-                name="password"
-                minlength="8" 
+                id="passord" 
+                name="password" 
                 required
                 />
                 <input type="submit" value= "Create New USer Profile"/>
