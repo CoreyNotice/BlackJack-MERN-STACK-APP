@@ -37,10 +37,13 @@ function login() {
                 <input type="submit" value= "Log In"/>
             </form>
             <br/>
-            <div>
-      <button type="button" class="btn btn-primary btn-lg btn-block">Enter</button>
+            <form action="newUser">
+         <button class="btn btn-primary btn-lg btn-block" type="submit">Create a New Profile</button>
+      </form>
+      <form action='' method="">
+  <input type='submit' value="Back to Home"/>
+</form>
 
-</div>
       
 
       

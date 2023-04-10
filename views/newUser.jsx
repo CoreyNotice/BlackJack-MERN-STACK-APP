@@ -1,7 +1,7 @@
 const React = require('react')
 const Default = require('./layouts/default')
 
-function New(){
+function newUser(){
     return(
         <Default>
             <h2>New User Form</h2>
@@ -36,4 +36,4 @@ function New(){
         </Default>
     )
 }
-module.exports=New
+module.exports=newUser

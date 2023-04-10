@@ -1,41 +1,25 @@
 const React = require('react')
 const Default = require('./layouts/default')
 
-function userprofile() {
+
+function userprofile({user,index}) {
+
   return( 
 <Default>
 <div>
+  <h3>{user.firstName}</h3>
   <button>Play</button>
+  <h2>User Scores:</h2>
+  </div>
+  <div>
   <h2>To delete your profile enter you information and click the Delete User Button below</h2>
-  <form action='/new' method="Delete">
-                <label for="firstName">First Name</label>
-                <input
-                type='text'
-                name='firstName'
-                id='firstName'
-                />
-                <label for="lastName">Last Name</label>
-                <input
-                type='text'
-                name='lastName'
-                id='lastName'
-                />
-                <label for="email">Enter your email:</label>
-                <input 
-                type="email" 
-                id="email" 
-                name="email"
-                />
-                <label for="password">Password (4 characters minimum):</label>
-                <input 
-                type="password" 
-                id="passord" 
-                name="password" 
-                required
-                />
-                <input type="submit" value= "Create New USer Profile"/>
-            </form>
-  <button>Delete User</button>
+  <form action={`/black/:${index}?_method=Delete`} method="POST">
+  <input type='submit' value="DELETE"/>
+</form>  
+<form action='/black/welcome' method="POST">
+  <input type='submit' value="Back to Home"/>
+</form>
+
 </div>
 </Default>
  )

@@ -25,7 +25,7 @@ black.get('/userprofile',(req,res)=>{
 })
 
 //New User
-black.get('/new',(req,res)=>{
+black.get('/newUser',(req,res)=>{
     res.render('newUser')
 })
 
@@ -48,6 +48,19 @@ black.get('/new',(req,res)=>{
 //       res.status(500).send('Server Error');
 //     }
 //   });
+black.delete('/:arrayIndex',(req, res)=>{
+    Black.findByIdAndDelete(req.params.id) 
+    .then(deleteObject => {
+      
+        res.status(303).redirect('login')
+      
+      // console.log({firstName: firstName, lastName: lastName, email: email, password: password})
+      })
 
-
+      .catch((error) => {
+        console.log(error)
+        res.send('Error occurred while searching for user')
+      })
+  })
+  
 module.exports=black;
